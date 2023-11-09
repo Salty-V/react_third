@@ -61,12 +61,20 @@ function Home() {
       },
     ];
   
+    // 1. On rend le tableau articles accessible en l'assignant à une constante, ici publishedArticles avec pour paramètre "article" en utilisant la propriété filter
+
+    // 2. On retourne les éléments du tableau si la valeur isPublished est "true"
+
     const publishedArticles = articles.filter((article) => {
       return article.isPublished === true;
     });
   
+    // 3. On déclare une nouvelle constante lastThreePublishedArticles qui accède à cette même condition (publishedArticles) en utilisant la propriété slice -3 pour n'afficher que les 3 derniers articles qui remplissent la condition isPublished === true
+
     const lastThreePublishedArticles = publishedArticles.slice(-3);
   
+    // 4. On retourne lastThreePublishedArticles via une boucle en utilisant .map et un paramètre (article) pour accéder aux sous-propriétés de chaque objet du tableau
+
     return (
       <main>
         <h2>Les trois derniers articles : </h2>
