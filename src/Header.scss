@@ -5,6 +5,11 @@ header {
   
     background-color: firebrick;
     color: white;
+
+    h1 {
+       left: 0;
+       position: absolute;
+    }
   
     nav {
         display: flex;

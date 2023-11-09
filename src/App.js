@@ -1,15 +1,16 @@
-import Footer from './Footer';
-import Header from './Header';
-import Home from './Home'; 
-import './style.scss';
+import Home from "./Home";
+import "./style.scss";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Contact from "./Contact";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Home />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
