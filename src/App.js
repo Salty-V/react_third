@@ -1,7 +1,10 @@
-import Home from "./Home";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Products from "./pages/Products";
+import Resume from "./pages/Resume";
 import "./style.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Contact from "./Contact";
+
 
 function App() {
   return (
@@ -9,6 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/resume" element={<Resume />} />
       </Routes>
     </BrowserRouter>
   );

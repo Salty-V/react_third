@@ -1,5 +1,5 @@
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Home() {
   const articles = [
@@ -79,7 +79,7 @@ function Home() {
           return (
             <article>
               <h2>{article.title}</h2>
-              <h3>{article.price}e</h3>
+              <h3>{article.price}€</h3>
             </article>
           );
         })}
