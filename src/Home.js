@@ -63,11 +63,6 @@ function Home() {
   
     // 1. On accède au tableau articles via la fonction filter et le paramètre "article"
 
-    e récuperant la donnée 
-    slice récupère les trois derniers éléments 
-
-
-
     // 2. On récupère les éléments du tableau si la valeur isPublished est "true"
 
     const publishedArticles = articles.filter((article) => {
@@ -81,8 +76,9 @@ function Home() {
     // 4. On retourne lastThreePublishedArticles via une boucle en utilisant .map et un paramètre (article) pour accéder aux sous-propriétés de chaque objet du tableau
 
     return (
+        <>
+    <h2>Les trois derniers articles : </h2>
       <main>
-        <h2>Les trois derniers articles : </h2>
         {lastThreePublishedArticles.map((article) => {
           return (
             <article>
@@ -92,6 +88,7 @@ function Home() {
           );
         })}
       </main>
+      </>
     );
   }
   
